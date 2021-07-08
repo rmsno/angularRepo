@@ -1,0 +1,39 @@
+.title
+{
+    color:lightgreen;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+ text-align: center;
+  
+}
+.subtitle
+{
+    color:slategray;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html {
+    height: 100%;
+   
+    }
+.grid{
+    width: 600px;
+    height: 300;
+    margin: 0 auto;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 2px solid #cbcbcb;
+    box-shadow: 10px 15px 5px #cbcbcb;
+    background-color: rgb(229, 243, 240);
+}
+.grid h2{
+    font-family: sans-serif;
+    background-color: rgb(183, 238, 183);
+    font-size: 60px;
+    text-align: center;
+    color:#fff;
+    padding: 2px 0px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   
+    <body>
+<h1 class="title"> Quiz  interview</h1>
+<h4 class="subtitle">online test portal for assessment.</h4>
+
+<form class="grid">
+ 
+    <div class="form-group ">
+    <label for="Name">Name:</label>
+    <input required minlength="3" maxlength="20" pattern="banana" ngModel name = "Name" id="Name" type="text" class="form-control"placeholder="Your Name">
+    <div class="alert alert-danger" *ngif="Name.touched && !Name.valid">
+    <div *ngif="Name.errors.required">Name is required</div>
+    <div *ngif="Name.errors.minlength">Name should be more then 3</div>
+    <div *ngif="Name.errors.pattern">Name not match pattren</div>
+</div>
+<br>
+<div class="form-group">
+    <label for="careers">your career:</label>
+     <select name="careers" id="career">
+     <option value="HR">CS</option>
+     <option value="Marketing">Marketing</option>
+     <option value="Finance">HR</option>
+     <option value="Economics">Economics</option>
+   </select>
+</div>
+   
+   <hr>
+        <label for="question1">What makes you a good team player?<span class="timer">2min</span></label>
+        <textarea  id="question1" cols="10" rows="6" class="form-control" ></textarea>
+        <label for="question2">Do you have experience of leading a team?<span class="timer">3min</span> </label>
+        <textarea  id="question2" cols="10" rows="5" class="form-control"placeholder="Tell me about it:"></textarea>
+        <label for="question3">What are the three most important characteristics of people you like to work with?<span class="timer">5min</span></label>
+        <textarea  id="question3" cols="10" rows="5" class="form-control"></textarea>
+        <label for="question4">What do you think is key to a successful career in recruitment?<span class="timer">4min</span></label>
+        <textarea  id="question4" cols="10" rows="5" class="form-control"placeholder="The key to a successful career is .."></textarea>
+       
+        <p>What is the best program to use for making a spread sheet?</p>
+          <input type="radio" id="MW" name="sheet" value="MW">
+          <label for="MW">Microsoft Word</label><br>
+          <input type="radio" id="MP" name="sheet" value="MP">
+          <label for="MP">Microsoft Publisher</label><br>
+          <input type="radio" id="ME" name="sheet" value="ME">
+          <label for="ME">Microsoft Excel</label>
+        
+          <br>  
+        
+          <p>Is it possible to have more than one program open at the same time?</p>
+          <input type="radio" id="yes" name="yes" value="yes">
+          <label for="yes">yes</label><br>
+          <input type="radio" id="false" name="no" value="no">
+          <label for="no">no</label><br>  
+          <br>
+    </div>
+   
+   <button class="btn btn-primary" (click)= "gotoPage('confirm')">submit</button>
+   <br>
+
+</form>
+<router-outlet></router-outlet>
+
+    </body>
+
+
+</html>
